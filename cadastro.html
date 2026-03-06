@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Paquera | Encontre sua cara-metade</title>
+    <style>
+        /* Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header e Navegação */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff4d6d;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        /* Seção Hero (Destaque) */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1511733351957-2c5999518cd7?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Formulário de Cadastro Rápido */
+        .signup-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            color: #333;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .signup-card h2 {
+            margin-bottom: 1.5rem;
+            color: #ff4d6d;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .btn-submit {
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #c9184a;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero-content {
+                width: 90%;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">💖 Gym Paquera</div>
+        <nav>
+            <a href="https://jdpogb.github.io/gympaquera/index.html">Home</a>
+            <a href="https://jdpogb.github.io/gympaquera/sobre.html">Sobre</a>
+            <a href="#">Entrar</a>
+            <a href="https://jdpogb.github.io/gympaquera/cadastro.html" style="color: #ff4d6d;">Cadastre-se</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">                     
+            <div class="signup-card">
+                <h2>Crie o seu perfil</h2>
+                <form action="https://jdpogb.github.io/gympaquera/cadastro.html">                                        
+                    <div class="form-group">
+                        <label>Eu sou:</label>
+                        <select>
+                            <option>Homem</option>
+                            <option>Mulher</option>
+                            <option>Casal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Procuro por:</label>
+                        <select>
+                            <option>Mulheres</option>
+                            <option>Homens</option>
+                            <option>Casais</option>
+                            <option>Ambos</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Qual Sua Gym:</label>
+                        <select>
+                <option>Smart Fit Academia</option>
+                <option>OH!FIT Academia</option>
+                <option>Xprime Academia</option>
+                <option>Skyfit Academia</option>
+                <option>Flynow Academia</option>
+                <option>Fly Fit Academia</option>
+                <option>Malibu Academia</option>
+                <option>Fit House Academia</option>
+                <option>GalvãoGym Academia</option>
+                <option>Panobianco Academia</option>
+                <option>Elity Fitness Academia</option>
+                <option>Corpus Gym Academia</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Matrícula [ Wellhub | Particular | TotalPass ] ID:</label>
+                        <input type="text" name="id_matricula" placeholder="Ex: 123456" required>
+                    </div>                  
+
+                    <div class="form-group">
+                      <label>Estado:</label>
+                          <select>
+                <option>Acre</option>
+                <option>Alagoas</option>
+                <option>Amapá</option>
+                <option>Amazonas</option>  
+                <option>Bahia</option>
+                <option>Ceará</option>
+                <option>Distrito Federal</option>
+                <option>Espírito Santo</option>
+                <option>Goiás</option>
+                <option>Maranhão</option>
+                <option>Mato Grosso</option>
+                <option>Mato Grosso do Sul</option>
+                <option>Minas Gerais</option>
+                <option>Pará</option>
+                <option>Paraíba</option>
+                <option>Paraná</option>
+                <option>Pernambuco</option>
+                <option>Piauí</option>
+                <option>Rio de Janeiro</option>
+                <option>Rio Grande do Norte</option>
+                <option>Rio Grande do Sul</option>
+                <option>Rondônia</option>
+                <option>Roraima</option>
+                <option>Santa Catarina</option>
+                <option>São Paulo</option>
+                <option>Sergipe</option>
+                <option>Tocantins</option>
+                    </select>
+                    </div>
+                    
+                <div class="form-group">
+                <label>Cidade:</label>
+                <input type="text" name="cidade" placeholder="Sua Cidade" required>
+                    </div>
+                    
+                <div class="form-group">
+                <label>Seu Nome ou NickName:</label>
+                <input type="text" name="nickname" placeholder="Como quer ser chamado(a)" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>E-mail:</label>
+                        <input type="email" placeholder="seu@email.com" required>
+                    </div>
+
+                    
+                    <button type="submit" class="btn-submit">Criar Perfil</button>
+            <p style="margin-bottom: 2rem;">Junte-se a milhares de pessoas que buscam conexões reais.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
