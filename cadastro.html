@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Paquera | Conexões Fitness | Encontre sua cara-metade na academia</title>
+    <meta name="description" content="Conecte-se com pessoas da mesma academia. Encontre treino e paquera no mesmo lugar."/>
+    <style>
+        :root {
+            --primary: #ff4d6d;
+            --primary-dark: #c9184a;
+            --bg-light: #f8f9fa;
+            --text-dark: #2d3436;
+            --gray: #636e72;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+
+        body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
+
+        nav a { text-decoration: none; color: var(--gray); margin-left: 20px; font-weight: 600; transition: 0.3s; }
+        nav a:hover { color: var(--primary); }
+
+        /* Container Principal */
+        .main-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        h2 { color: var(--primary); margin-bottom: 20px; font-size: 1.8rem; }
+
+        /* Grid do Formulário */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-group { margin-bottom: 15px; }
+        .full-width { grid-column: span 2; }
+
+        label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.85rem; color: var(--gray); }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #eee;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus { border-color: var(--primary); }
+
+        /* Upload de Fotos */
+        .alert {
+            background: #fff5f5;
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .photo-box {
+            aspect-ratio: 1/1;
+            border: 2px dashed #ddd;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            overflow: hidden;
+            background: #fafafa;
+            position: relative;
+        }
+
+        .photo-box:hover { border-color: var(--primary); background: #fff0f3; }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
+
+        .photo-box span { font-size: 2rem; color: #bbb; z-index: 1; }
+
+        /* Botão Final */
+        .btn-submit {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn-submit:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .form-grid { grid-template-columns: 1fr; }
+            .full-width { grid-column: span 1; }
+            .photo-grid { gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">💖 Gym Paquera</a>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Entrar</a>
+            <a href="./cadastro.html" style="color: var(--primary);">Cadastre-se</a>
+            <a href="#">Academias Parceiras</a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <form id="profileForm">
+            <section class="card">
+                <h2>Crie o seu perfil</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Eu sou:</label>
+                        <select required>
+                            <option value="">Selecione...</option>
+                            <option>Homem</option>
+                            <option>Mulher</option>
+                            <option>Casal</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Procuro por:</label>
+                        <select required>
+                            <option value="">Selecione...</option>
+                            <option>Mulheres</option>
+                            <option>Homens</option>
+                            <option>Casais</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Qual Sua Gym:</label>
+                        <select required>
+                            <option value="">Selecione sua academia...</option>
+                            <option>Smart Fit Academia</option>
+                            <option>OH!FIT Academia</option>
+                            <option>Xprime Academia</option>
+                            <option>Skyfit Academia</option>
+                            <option>Flynow Academia</option>
+                            <option>Fly Fit Academia</option>
+                            <option>Malibu Academia</option>
+                            <option>Fit House Academia</option>
+                            <option>GalvãoGym Academia</option>
+                            <option>Panobianco Academia</option>
+                            <option>Elity Fitness Academia</option>
+                            <option>Corpus Gym Academia</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>ID Matrícula:</label>
+                        <input type="text" placeholder="Wellhub / Particular / TotalPass">
+                    </div>
+
+                <div class="form-group">
+                    <label>Estado:</label>
+                    <select name="estado" required>
+                        <option value="" disabled selected>Selecione...</option>
+                        <option>Acre</option><option>Alagoas</option><option>Amapá</option><option>Amazonas</option>
+                        <option>Bahia</option><option>Ceará</option><option>Distrito Federal</option><option>Espírito Santo</option>
+                        <option>Goiás</option><option>Maranhão</option><option>Mato Grosso</option><option>Mato Grosso do Sul</option>
+                        <option>Minas Gerais</option><option>Pará</option><option>Paraíba</option><option>Paraná</option>
+                        <option>Pernambuco</option><option>Piauí</option><option>Rio de Janeiro</option><option>Rio Grande do Norte</option>
+                        <option>Rio Grande do Sul</option><option>Rondônia</option><option>Roraima</option><option>Santa Catarina</option>
+                        <option>São Paulo</option><option>Sergipe</option><option>Tocantins</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Cidade:</label>
+                    <input type="text" name="cidade" placeholder="Ex: Campinas, jundíai..." required/>
+                </div>
+
+                    <div class="form-group">
+                        <label>Apelido / Nickname:</label>
+                        <input type="text" placeholder="Ex: Maromba99" required>
+                    </div>
+                <div class="form-group">
+                    <label>E-mail:</label>
+                    <input type="email" name="email" placeholder="seuemail@exemplo.com" required/>
+                </div>
+
+                <div class="form-group">
+                    <label>Senha:</label>
+                    <input type="password" name="senha" id="senha" placeholder="Mínimo 6 caracteres" required>
+                </div>
+                <div class="form-group">
+                    <label>Confirmar Senha:</label>
+                    <input type="password" id="confirmar_senha" placeholder="Repita sua senha" required>
+                    <small id="msgErro" style="color: var(--primary); display: none;">As senhas não coincidem!</small>
+                </div>
+
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Fotos do Shape</h2>
+                <div class="alert">
+                    <strong>⚠️ Regras de Privacidade:</strong>
+                    <p>Proibido fotos de rosto ou nudez explícita. Foque no treino/shape!</p>
+                </div>
+
+                <div class="photo-grid">
+                    <div class="photo-box" onclick="triggerInput(1)">
+                        <span id="plus-1">+</span>
+                        <img id="preview-1" src="" style="display:none;">
+                        <input type="file" id="input-1" hidden accept="image/*" onchange="previewImage(this, 1)">
+                    </div>
+                    <div class="photo-box" onclick="triggerInput(2)">
+                        <span id="plus-2">+</span>
+                        <img id="preview-2" src="" style="display:none;">
+                        <input type="file" id="input-2" hidden accept="image/*" onchange="previewImage(this, 2)">
+                    </div>
+                    <div class="photo-box" onclick="triggerInput(3)">
+                        <span id="plus-3">+</span>
+                        <img id="preview-3" src="" style="display:none;">
+                        <input type="file" id="input-3" hidden accept="image/*" onchange="previewImage(this, 3)">
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-submit">Finalizar Cadastro</button>
+                       <br><br> <p class="info-text">Junte-se a milhares de pessoas que buscam conexões reais na academia.</p>
+            </section>
+        </form>
+    </main>
+
+    <script>
+        // Função para abrir o seletor de arquivo ao clicar no quadrado
+        function triggerInput(id) {
+            document.getElementById('input-' + id).click();
+        }
+
+        // Função para mostrar a imagem selecionada imediatamente
+        function previewImage(input, id) {
+            const preview = document.getElementById('preview-' + id);
+            const plus = document.getElementById('plus-' + id);
+            
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                    plus.style.display = 'none';
+                }
+                
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        // Prevenção de envio apenas para demonstração
+        document.getElementById('profileForm').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Perfil criado com sucesso! (Simulação)');
+        }
+    </script>
+</body>
+</html>
