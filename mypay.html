@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Paquera | Conexões Fitness</title>
+    <meta name="description" content="Conecte-se com pessoas da mesma academia. Encontre treino e paquera no mesmo lugar."/>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #ff4d6d;
+            --primary-dark: #c9184a;
+            --success: #27ae60;
+            --bg-light: #f8f9fa;
+            --text-dark: #2d3436;
+            --gray: #636e72;
+            --white: #ffffff;
+            --border: #eeeeee;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: var(--bg-light); 
+            color: var(--text-dark); 
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            line-height: 1.6; 
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo { 
+            font-size: 1.5rem; 
+            font-weight: 800; 
+            color: var(--primary); 
+            text-decoration: none; 
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav { display: flex; gap: 15px; align-items: center; }
+        nav a { 
+            text-decoration: none; 
+            color: var(--gray); 
+            font-weight: 600; 
+            transition: 0.3s; 
+            font-size: 0.9rem;
+        }
+        nav a:hover { color: var(--primary); }
+        
+        .btn-nav { 
+            color: var(--primary) !important; 
+            border: 2px solid var(--primary); 
+            padding: 5px 15px; 
+            border-radius: 25px; 
+        }
+        .btn-nav:hover { background: var(--primary); color: white !important; }
+
+        .btn-premium {
+            color: var(--success) !important;
+            font-weight: 700;
+        }
+
+        /* Container */
+        .main-container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        h2 { 
+            color: var(--primary); 
+            margin-bottom: 20px; 
+            font-size: 1.4rem; 
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Pagamento */
+        .payment-box {
+            background: #fff0f3;
+            border: 2px solid var(--primary);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--primary-dark);
+            margin: 10px 0;
+        }
+
+        .payment-methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .payment-methods-grid img {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        /* Upload de Comprovante (Opcional, mas melhora a UX) */
+        .upload-section {
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .btn-submit {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 15px;
+        }
+
+        .btn-submit:hover { background: var(--primary-dark); }
+
+        .badge-exclusive {
+            background: #e9ecef;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--gray);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header { flex-direction: column; padding: 1rem; gap: 15px; }
+            nav { font-size: 0.8rem; flex-wrap: wrap; justify-content: center; }
+            .price-tag { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="file:///media/jo2313/3.04GB/home/proj_gym/html/index.html" class="logo"><i class="fas fa-heart"></i> Gym Paquera</a>
+        <nav>
+            <a href="file:///media/jo2313/3.04GB/home/proj_gym/html/index.html">Home</a>
+            <a href="file:///media/jo2313/3.04GB/home/proj_gym/html/sobre.html">Sobre</a>
+            <a href="file:///media/jo2313/3.04GB/home/proj_gym/html/login.html">Login</a>
+            <a href="file:///media/jo2313/3.04GB/home/proj_gym/html/cadastro.html" class="btn-nav">Cadastre-se</a>
+            <a href="file:///media/jo2313/3.04GB/home/proj_gym/html/gymparceiras.html">Gym Parceiras</a>
+            <a href="file:///media/jo2313/3.04GB/home/proj_gym/html/mypay.html" class="btn-premium">Assine já R$9,90/mês</a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+
+        <section class="payment-box">
+            <h2><i class="fas fa-crown"></i> Torne-se Premium</h2>
+            <p>Conecte-se com o crush da sua academia hoje mesmo!</p>
+            <div class="price-tag">R$ 9,90<small style="font-size: 1rem;">/mês</small></div>
+            
+            <div style="text-align: left; background: white; padding: 15px; border-radius: 10px; margin-top: 15px;">
+                <p><strong><i class="fas fa-info-circle"></i> Como liberar seu acesso:</strong></p>
+                <ul style="margin-left: 20px; font-size: 0.9rem; margin-top: 10px;">
+                    <li>Realize o pagamento abaixo.</li>
+                    <li>Tire um print do comprovante.</li>
+                    <li>Envie para nosso WhatsApp ou E-mail suporte.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2><i class="fas fa-qrcode"></i> Dados para Pagamento</h2>
+            <p style="color: var(--gray); margin-bottom: 15px;">Utilize uma das opções abaixo:</p>
+            
+            <div class="payment-methods-grid">
+                <img src="file:///media/jo2313/3.04GB/home/proj_gym/img/qrcode.jpg" alt="QR Code Pix 1">
+                <img src="file:///media/jo2313/3.04GB/home/proj_gym/img/agcc.jpg" alt="ag cc">
+                <img src="file:///media/jo2313/3.04GB/home/proj_gym/img/gqrcode.jpg" alt="QR Code Pix 2">
+            </div>
+
+            <div class="upload-section">
+                <form id="paymentForm">
+                    <button type="submit" class="btn-submit">
+                        <i class="fab fa-whatsapp"></i> Confirmar via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="badge-exclusive">
+            <strong><i class="fas fa-lock"></i> Acesso Exclusivo</strong>
+            <p>Este portal é reservado apenas para alunos matriculados em academias parceiras.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gym Paquera - O portal de paquera das academias.<br>Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Lógica simplificada para o botão
+        document.getElementById('paymentForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const mensagem = encodeURIComponent("Olá! Acabei de realizar o pagamento do Gym Paquera e gostaria de enviar o comprovante.");
+            const whatsappLink = `https://wa.me/5500000000000?text=${mensagem}`; // Substitua pelo seu número
+            
+            alert('Redirecionando para o WhatsApp de suporte...');
+            window.location.href = whatsappLink;
+        });
+    </script>
+</body>
+</html>

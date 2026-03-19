@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Paquera | Termos e Privacidade</title>
+    <meta name="description" content="Conecte-se com pessoas da mesma academia. Encontre treino e paquera no mesmo lugar."/>
+    
+    <style>
+        :root {
+            --primary: #ff4d6d;
+            --primary-dark: #c9184a;
+            --bg-light: #f8f9fa;
+            --text-dark: #2d3436;
+            --gray: #636e72;
+            --white: #ffffff;
+            --border: #eeeeee;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --success: #27ae60; /* Adicionado para evitar erro no link de assinatura */
+        }
+
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background-color: var(--bg-light); 
+            color: var(--text-dark); 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6; 
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo { 
+            font-size: 1.5rem; 
+            font-weight: 800; 
+            color: var(--primary); 
+            text-decoration: none; 
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav { display: flex; gap: 20px; align-items: center; }
+        nav a { 
+            text-decoration: none; 
+            color: var(--gray); 
+            font-weight: 600; 
+            transition: color 0.3s ease; 
+            font-size: 0.95rem;
+        }
+        nav a:hover { color: var(--primary); }
+        nav .btn-nav { color: var(--primary); border: 1px solid var(--primary); padding: 5px 15px; border-radius: 20px; }
+        nav .btn-nav:hover { background: var(--primary); color: white; }
+
+        /* Main Content */
+        .main-container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        h2 { 
+            color: var(--primary); 
+            margin-bottom: 25px; 
+            font-size: 1.6rem; 
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 { margin: 25px 0 10px 0; color: var(--primary-dark); font-size: 1.2rem; }
+        p { margin-bottom: 15px; color: var(--gray); }
+
+        /* Alert/Section Style */
+        .content-section {
+            padding: 15px 0;
+        }
+
+        .content-section ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .content-section li {
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .exclusivity-badge {
+            background: #e9ecef;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .exclusivity-badge strong {
+            display: block;
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            background: var(--white);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; padding: 1.5rem; text-align: center; }
+            nav { font-size: 0.8rem; flex-wrap: wrap; justify-content: center; gap: 10px; }
+            .main-container { margin: 20px auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo"><span>💖</span> Gym Paquera</a>
+        <nav>
+            <a href="file:///media/jo2313/3.04GB/home/proj_gym/html/index.html">Home</a>
+            <a href="file:///media/jo2313/3.04GB/home/proj_gym/html/sobre.html">Sobre</a>
+            <a href="file:///media/jo2313/3.04GB/home/proj_gym/html/login.html">Login</a>
+            <a href="file:///media/jo2313/3.04GB/home/proj_gym/html/cadastro.html" class="btn-nav">Cadastre-se</a>
+            <a href="file:///media/jo2313/3.04GB/home/proj_gym/html/gymparceiras.html">Gym Parceiras</a>
+            <a href="file:///media/jo2313/3.04GB/home/proj_gym/html/mypay.html" style="color: var(--success) !important;">Assine já R$9,90/mês</a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+
+        <section class="card">
+            <h2>Termos de Uso</h2>
+            <div class="content-section">
+                <p>Este documento estabelece as regras para quem utiliza a plataforma <strong>GYM PAQUERA</strong>.</p>
+                
+                <h3>1. Aceitação dos Termos</h3>
+                <p>Ao acessar e usar este site, você concorda em cumprir e estar vinculado aos seguintes termos. Se você não concordar com qualquer parte destes termos, não deve utilizar nossos serviços.</p>
+
+                <h3>2. Uso do Serviço</h3>
+                <ul>
+                    <li>O usuário compromete-se a utilizar a plataforma para fins lícitos.</li>
+                    <li>É proibido o uso de técnicas de invasão (hacking), disseminação de vírus ou qualquer atividade que prejudique o funcionamento do site.</li>
+                </ul>
+
+                <h3>3. Propriedade Intelectual</h3>
+                <p>Todo o conteúdo (textos, logotipos, designs, códigos) é de propriedade exclusiva da Gym Paquera ou de seus licenciadores, protegido por leis de direitos autorais.</p>
+
+                <h3>4. Limitação de Responsabilidade</h3>
+                <p>Não nos responsabilizamos por danos indiretos ou perda de dados decorrentes do uso inadequado da plataforma. O serviço é fornecido "como está".</p>
+
+                <h3>5. Alterações</h3>
+                <p>Reservamo-nos o direito de modificar estes termos a qualquer momento. O uso continuado do site após alterações constitui aceitação dos novos termos.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Política de Privacidade</h2>
+            <div class="content-section">
+                <p>Este documento foca na proteção de dados e transparência da <strong>GYM PAQUERA</strong>.</p>
+
+                <h3>1. Coleta de Informações</h3>
+                <p>Coletamos informações que você nos fornece diretamente (nome, e-mail, telefone) e dados coletados automaticamente (cookies, endereço IP).</p>
+
+                <h3>2. Uso dos Dados</h3>
+                <p>Seus dados são utilizados para processar seu cadastro, melhorar a experiência do usuário e enviar comunicações autorizadas.</p>
+
+                <h3>3. Compartilhamento de Dados</h3>
+                <p>Não vendemos seus dados a terceiros. Podemos compartilhar informações apenas com parceiros essenciais (ex: processadores de pagamento) ou por ordem judicial.</p>
+
+                <h3>4. Seus Direitos (LGPD)</h3>
+                <p>De acordo com a Lei Geral de Proteção de Dados, você tem o direito de acessar, corrigir ou solicitar a exclusão definitiva de seus dados de nossa base.</p>
+
+                <h3>5. Contato</h3>
+                <p>Para questões de privacidade, entre em contato em: <strong>contato@gympaquera.com.br</strong></p>
+            </div>
+        </section>
+
+        <section class="exclusivity-badge">
+            <strong>🔒 Acesso Exclusivo | Assine já R$9,90/mês</strong>
+            <p>Este portal é reservado apenas para alunos matriculados em academias parceiras.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gym Paquera - O portal de paquera das academias. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
